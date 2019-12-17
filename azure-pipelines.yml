@@ -17,7 +17,7 @@ variables:
   - name: DOTNET_SKIP_FIRST_TIME_EXPERIENCE
     value: true
   - name: ResourceGroupName
-    value: 'h4h-letsencrypt-func'
+    value: 'honey'
   
 stages:
 - stage: build
