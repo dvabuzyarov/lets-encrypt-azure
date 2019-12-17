@@ -4,7 +4,7 @@
     "parameters": {},
     "variables": {
         "appInsightsName": "[resourceGroup().name]",
-        "storageAccountName": "[toLower(replace(resourceGroup().name, '-', ''))]",
+        "storageAccountName": "h4h2shop",
         "storageAccountId": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
         "functionAppName": "[resourceGroup().name]",
         "hostingPlanName": "[resourceGroup().name]"
