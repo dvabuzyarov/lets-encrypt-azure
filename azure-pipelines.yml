@@ -84,7 +84,7 @@ stages:
     - task: AzurePowerShell@4
       displayName: 'Deploy'
       inputs:
-        azureSubscription: 'Opensource Deployments'
+        azureSubscription: 'h4h-letsencrypt-deployment'
         ScriptPath: '$(System.ArtifactsDirectory)/Deploy.ps1'
         ScriptArguments: '-ResourceGroupName $(ResourceGroupName)'
         azurePowerShellVersion: LatestVersion
@@ -97,7 +97,7 @@ stages:
     - task: AzureFunctionApp@1
       displayName: 'Deploy Azure Function App'
       inputs:
-        azureSubscription: 'Opensource Deployments'
+        azureSubscription: 'h4h-letsencrypt-deployment'
         appType: functionApp
         appName: '$(ResourceGroupName)'
         package: '$(System.ArtifactsDirectory)/LetsEncrypt.Func'
