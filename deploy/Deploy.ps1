@@ -32,7 +32,7 @@ if ($ResourceGroup -eq $null) {
 Write-Output "Deploying to resourcegroup $ResourceGroupName"
 
 $templateFile = Join-Path $PSScriptRoot $File
-$parameters = @{}
+$parameters = @{storageAccountName:"h4h2shop"}
 
 New-AzResourceGroupDeployment `
     -ResourceGroupName $ResourceGroupName `
