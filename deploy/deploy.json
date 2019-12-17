@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {},
     "variables": {
-        "appInsightsName": "h4h-appInsight",
-        "storageAccountName": "h4h2shop",
+        "appInsightsName": "[resourceGroup().name]",
+        "storageAccountName": "[toLower(replace(resourceGroup().name, '-', ''))]",
         "storageAccountId": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-        "functionAppName": "h4h-funcApp",
-        "hostingPlanName": "h4h-funcHosting"
+        "functionAppName": "[resourceGroup().name]",
+        "hostingPlanName": "[resourceGroup().name]"
     },
     "resources": [
         {
