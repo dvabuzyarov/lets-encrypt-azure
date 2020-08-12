@@ -4,7 +4,7 @@ on:
       - master
 
 env:
-  ResourceGroup: letsencrypt-inttest
+  ResourceGroup: letsencrypt
 jobs:
   deploy:
     runs-on: ubuntu-latest
