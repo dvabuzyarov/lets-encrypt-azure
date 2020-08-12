@@ -7,7 +7,7 @@
         "appInsightsName": "[resourceGroup().name]",
         "storageAccountName": "[concat(toLower(replace(resourceGroup().name, '-', '')), 'config')]",
         "storageAccountId": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-        "functionAppName": "[resourceGroup().name]",
+        "functionAppName": "[concat(resourceGroup().name, 'funcs')]",
         "hostingPlanName": "[resourceGroup().name]"
     },
     "resources": [
