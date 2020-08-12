@@ -4,7 +4,7 @@ on:
       - master
 
 env:
-  ResourceGroup: letsencrypt-certificates
+  ResourceGroup: letsencrypt-https
 jobs:
   build:
     runs-on: ubuntu-latest
